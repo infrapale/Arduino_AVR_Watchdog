@@ -20,7 +20,7 @@ void loop() {
   Serial.println("Looping 2000ms");
   delay(2000);
   watchdog.clear();
-  Serial.println("Looping 4000ms");
-  delay(4000);
+  Serial.println("Looping 5000ms");
+  delay(5000);
   watchdog.clear();
 }
