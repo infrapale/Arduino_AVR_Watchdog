@@ -1,21 +1,26 @@
-//#include <avr/wdt.h>
-#include "avr_watchdog.h"
+#include "Arduino.h"
+#include "AVR_Watchdog.h"
 /*
- * https://www.teachmemicro.com/arduino-watchdog-timer/
+ *  avr_watchdog example
  */
+uint8_t i;
+AVR_Watchdog watchdog(4);
 
-void setup() {
+void setup() 
+{
   cli();
-  delay(5000);
-  wdt_init(4);
+  delay(4000);
+  watchdog.set_timeout(4);
   sei();
   Serial.begin(9600);
   Serial.println("Restarting..");
 }
  
 void loop() {
-  Serial.println("Looping..");
-  delay(5000);
-  wdt_clear();
-  
+  Serial.println("Looping 2000ms");
+  delay(2000);
+  watchdog.clear();
+  Serial.println("Looping 4000ms");
+  delay(4000);
+  watchdog.clear();
 }

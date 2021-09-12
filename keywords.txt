@@ -1,0 +1,3 @@
+AVR_Watchdog     KEYWORD1
+clear        KEYWORD2
+set_timeout  KEYWORD2
