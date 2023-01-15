@@ -5,9 +5,9 @@
 class AVR_Watchdog
 {
 	public:
-		AVR_Watchdog(uint8_t wdt_seconds);
+		AVR_Watchdog(uint16_t wdt_seconds);
 		void clear(void);
-		void set_timeout(uint8_t wdt_seconds);
+		void set_timeout(uint16_t wdt_seconds);
 	private:
 		uint8_t dummy;
 };
