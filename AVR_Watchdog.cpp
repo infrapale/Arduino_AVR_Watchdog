@@ -5,7 +5,6 @@
  */
 #include <stdint.h>
 #include <Arduino.h> 
-#include <avr/wdt.h>
 #include <AVR_Watchdog.h>
 
 uint16_t wdt_count;
